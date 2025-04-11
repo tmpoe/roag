@@ -1,6 +1,7 @@
 use axum::{routing::get, Router};
 
 pub async fn health_check() -> String {
+    println!("HC called");
     "Pong".to_string()
 }
 
