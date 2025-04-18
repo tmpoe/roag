@@ -6,5 +6,11 @@ edition = "2024"
 [dependencies]
 axum = "0.8.3"
 chrono = { version = "0.4.40", features = ["serde"] }
+diesel = { version = "2.2.0", features = ["postgres"] }
+# build libpq and openssl as part of the build process
+# uncomment these lines if you run into setup issues
+# pq-sys = { version = "0.6", features = ["bundled"] }
+# openssl-sys = { version = "0.9.100", features = ["vendored"] } 
+dotenvy = "0.15"
 serde = { version = "1.0", features = ["derive"] }                       # Change here
 tokio = { version = "1.44.2", features = ["macros", "rt-multi-thread"] }
